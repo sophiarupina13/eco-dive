@@ -14,7 +14,11 @@ export default function Main() {
           как и выглядит.
         </p>
       </div>
-      <img src="./src/drone.png" alt="drone" className="main-drone"></img>
+      <img src="../src/drone.png" alt="drone" className="main-drone"></img>
+      <img src="../src/bubble.svg" alt="bubble" className="bubble1"></img>
+      <img src="../src/bubble.svg" alt="bubble" className="bubble2"></img>
+      <img src="../src/bubble.svg" alt="bubble" className="bubble3"></img>
+      <img src="../src/bubble.svg" alt="bubble" className="bubble4"></img>
     </section>
   );
 }

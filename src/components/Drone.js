@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Drone() {
   return (
-    <section className="section-drone">
+    <section className="section-drone" id="sectionDrone">
       <div className="drone-container">
         <div className="drone-container1">
           <h2 className="drone-title">Подводный дрон</h2>
