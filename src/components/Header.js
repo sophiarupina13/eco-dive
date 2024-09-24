@@ -16,6 +16,17 @@ export default function Header() {
         </li>
       </ul>
       <button className="button-buy">Купить</button>
+      <div className="form-bg">
+        <div className="form-buy">
+          <h2>Оставьте заявку на покупку</h2>
+          <form>
+            <input type="text" placeholder="Ваше имя" />
+            <input type="phone" placeholder="Ваш телефон" />
+            <input type="email" placeholder="Ваш email" />
+            <button>Отправить</button>
+          </form>
+        </div>
+      </div>
     </header>
   );
 }

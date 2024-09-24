@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Main() {
   return (
-    <section className="section-main">
+    <section className="section-main" id="main">
       <div className="main-text">
         <h1 className="main-title">Подводный дрон</h1>
         <p className="main-description">

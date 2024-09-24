@@ -20,35 +20,47 @@ export default function FAQ() {
         </p>
         <button className="faq-button">Задать вопрос</button>
       </div>
-      <div className="faq-qa">
-        <ul>
-          <li>
-            <h3 className="faq-question">
-              Нужны ли специальные знания для использования подводного дрона?
-            </h3>
-            <div className="faq-border"></div>
-            <p className="faq-answer">
-              Нет, для использования нашего дрона не нужны знания
-              программирования, с интерфейсом разберется каждый.{" "}
-            </p>
-          </li>
-          <li>
-            <h3 className="faq-question">Вопрос 2</h3>
-            <div className="faq-border"></div>
-            <p className="faq-answer">Ответ 2</p>
-          </li>
-          <li>
-            <h3 className="faq-question">Вопрос 3</h3>
-            <div className="faq-border"></div>
-            <p className="faq-answer">Ответ 3</p>
-          </li>
-          <li>
-            <h3 className="faq-question">Вопрос 4</h3>
-            <div className="faq-border"></div>
-            <p className="faq-answer">Ответ 4</p>
-          </li>
-        </ul>
-      </div>
+      <ul className="faq-qa">
+        <li>
+          <h3 className="faq-question">
+            Нужны ли специальные знания для использования подводного дрона?
+          </h3>
+          <div className="faq-border"></div>
+          <p className="faq-answer">
+            Нет, для использования нашего дрона не нужны знания
+            программирования, с интерфейсом разберется каждый.{" "}
+          </p>
+        </li>
+        <li>
+          <h3 className="faq-question">
+            На какую глубину способен погружаться дрон?
+          </h3>
+          <div className="faq-border"></div>
+          <p className="faq-answer">
+            Дрон способен погружаться на глубину до 10 метров, сохранив
+            возможность перемещаться в разных направлениях одной плоскости.
+          </p>
+        </li>
+        <li>
+          <h3 className="faq-question">Есть ли влагозащита?</h3>
+          <div className="faq-border"></div>
+          <p className="faq-answer">
+            Подводный дрон имеет степень защиты IP68. Он полностью защищён от
+            пыли и предназначен для длительного нахождения под водой.
+          </p>
+        </li>
+        <li>
+          <h3 className="faq-question">
+            Можно ли использовать дрон в соленой воде?
+          </h3>
+          <div className="faq-border"></div>
+          <p className="faq-answer">
+            Наш дрон был создан преимуцественно для пресной и стоячей воды,
+            поэтому не рекомендуется использовать его в солёной воде или в
+            водоемах с сильным течением.
+          </p>
+        </li>
+      </ul>
     </section>
   );
 }

@@ -5,12 +5,23 @@
   font-family: "Unbounded", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background: rgb(73,197,253);
-  background: linear-gradient(180deg, rgba(73,197,253,1) 0%, rgba(11,25,37,1) 100%);
+  background-image: url("/public/src/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-h1::selection, h2::selection, h3::selection, p::selection, li::selection {
-  background-color: #174D9C;
+h1::selection, h2::selection, h3::selection, p::selection, li::selection, a::selection {
+  background-color: #1F5371;
+}
+
+button::selection {
+  background-color: #ffffff;
+  color: #1F5371;
+}
+
+h1, h2, h3, p, li {
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
 }
 
 body {
@@ -30,7 +41,7 @@ h3 {
 }
 
 p {
-  font-size: 1vw;
+  font-size: 1.1vw;
 }
 
 ul {
@@ -47,6 +58,10 @@ a:visited {
   color: inherit;
 }
 
+.logo {
+  scale: 1.2;
+}
+
 button, .logo {
   cursor: pointer;
   transition: transform 500ms ease;
@@ -59,7 +74,7 @@ button {
   border: none;
   border-radius: 50vw;
   font-weight: 600;
-  font-size: 0.9vw;
+  font-size: 1vw;
 }
 
 button:hover, .logo:hover {
@@ -76,6 +91,12 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: #ffffff3b;
+  position: fixed;
+  top: 0;
+  width: 85%;
+  backdrop-filter: blur(30px);
+  z-index: 100;
 }
 
 .menu {
@@ -95,14 +116,78 @@ header {
 }
 
 .button-buy {
-  background-color: #174D9C;
+  background-color: #1F5371;
+}
+
+.form-bg {
+  width: 100vw;
+  height: 100vw;
+  position: absolute;
+  background-color: rgba(100, 100, 100, 0.623);
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.form-buy {
+  background-image: url("/public/src/form-bg.png");
+  border-radius: 3vw;
+  z-index: 1001;
+  border: 2px solid #1F5371;
+  position: absolute;
+  top:20%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  padding: 4vw 4.5vw;
+  color: #1F5371;
+}
+
+.form-buy form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-buy form input {
+  border: 2px solid #1F5371;
+  border-radius: 50vw;
+  padding: 1.1vw;
+}
+
+.form-buy form input::placeholder, .form-buy form input {
+  font-family: "Unbounded", sans-serif;
+  color: #8f8f8f;
+}
+
+.form-buy form input:focus {
+  border: 2px solid #c70000;
+}
+
+.form-buy form input {
+  margin-bottom: 1vw;
+}
+
+
+.form-buy button {
+  margin-top: 1vw;
+  width: 30%;
+  align-self: center;
+}
+
+.form-buy h2 {
+  text-wrap: nowrap;
+  margin-top: -1vw;
+  font-weight: 400;
+}
+
+.form-buy button {
+  background-color: #1F5371;
 }
 
 .section-main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1.6vw 8vw 6vw 8vw;
+  padding: 6vw 8vw 6vw 8vw;
 }
 
 .main-text {
@@ -113,16 +198,17 @@ header {
 .main-title {
   font-size: 4vw;
   font-weight: 900;
+  text-wrap: nowrap;
 }
 
 .main-description {
-  margin-top: -2vw;
+  margin-top: -1vw;
   text-align: start;
 }
 
 .main-drone {
   margin-right: 4vw;
-  margin-top: 10vw;
+  margin-top: 13vw;
   scale: 1.3;
   position: relative;
   right: -20vw; 
@@ -136,7 +222,7 @@ header {
     opacity: 0;
   }
   100% {
-    right: 5vw;
+    right: 10vw;
     opacity: 1;
   }
 }
@@ -157,7 +243,7 @@ header {
 
 .bubble2 {
   top: 34%;
-  right: 5%;
+  right: 3%;
   animation: easeIn 0.4s ease forwards;
   animation-delay: 1.2s;
 }
@@ -171,7 +257,7 @@ header {
 
 .bubble4 {
   top: 60%;
-  right: 6%;
+  right: 4%;
   animation: easeIn 0.4s ease forwards;
   animation-delay: 1s;
 }
@@ -227,6 +313,24 @@ header {
   padding: 4vw 8vw 4vw 8vw;
 }
 
+.tests-list li:not(:first-child) {
+  margin-top: -1vh;
+}
+
+.tests-list li p {
+  position: relative;
+  padding-left: 1vw;
+}
+
+.tests-list li p::before {
+  content: "•";
+  color: #ffffff;
+  font-size: 1.4vw;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
 .section-about {
   background-image: url('../public/src/divers.png');
   background-size: cover;
@@ -238,13 +342,13 @@ header {
 }
 
 .about-description {
-  margin-top: 4vw;
+  margin-top: 3vw;
   width: 50vw;
 }
 
 .section-faq {
   color: #fff;
-  padding: 3vw 8vw;
+  padding: 6vw 8vw 3vw 8vw;
   display: grid;
   grid-template-columns: 50% 50%;
 }
@@ -260,10 +364,15 @@ header {
 .faq-button {
   margin-top: 3vw;
   background-color: #6EE347;
+  color: #174D9C;
 }
 
 .faq-qa {
   margin-top: 2.4vw;
+}
+
+.faq-qa li:not(:first-child) {
+  margin-top: 2vw;
 }
 
 .faq-border {
@@ -275,40 +384,46 @@ header {
   padding: 3vw 8vw 35vw 8vw;
 }
 
+.section-drone p, .section-drone h2, .section-drone h3 {
+  text-shadow: none;
+}
+
 .drone-container {
   background-color: #ffffffd3;
   color: black;
   border-radius: 1vw;
   display: grid;
-  grid-template-columns: 40% 38% 22%;
+  grid-template-columns: 40% 30% 30%;
   padding: 2.5vw 5vw 2.5vw 5vw;
   text-wrap: nowrap;
 }
 
 .drone-container1 h2::selection, p::selection {
-  background-color: #174D9C;
+  background-color: #1F5371;
   color: white;
 }
 
 .drone-container2 h3::selection, p::selection {
-  background-color: #174D9C;
+  background-color: #1F5371;
   color: white;
 }
 
 .drone-price {
   margin-top: -1.5vw;
-  color: #174D9C;
+  color: #1F5371;
   font-weight: 600;
   font-size: 1.7vw;
 }
 
 .drone-button {
-  background-color: #174D9C;
+  background-color: #1F5371;
   margin-top: 11vw;
 }
 
 .drone-pic {
-  margin-left: -5vw;
+  margin-left: -18vw;
+  margin-top: 7vw;
+  scale: 0.9;
 }
 
 .drone-container2 {
