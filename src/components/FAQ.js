@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function FAQ() {
+  const [isFormVisible, setFormVisible] = useState(false);
+
+  const handleOpenDialog = () => {
+    setFormVisible(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const handleCloseDialog = () => {
+    setFormVisible(false);
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <section className="section-faq" id="sectionFAQ">
       <div className="faq-text">
@@ -18,7 +30,9 @@ export default function FAQ() {
           <br />
           его через форму обратной связи.
         </p>
-        <button className="faq-button">Задать вопрос</button>
+        <button className="faq-button" onClick={handleOpenDialog}>
+          Задать вопрос
+        </button>
       </div>
       <ul className="faq-qa">
         <li>
@@ -61,6 +75,17 @@ export default function FAQ() {
           </p>
         </li>
       </ul>
+      <div className={`form-bg-faq ${isFormVisible ? "visible" : ""}`}>
+        <div className="form-question">
+          <h2>Задайте свой вопрос</h2>
+          <form>
+            <input type="text" placeholder="Ваше имя" />
+            <input type="email" placeholder="Ваш email" />
+            <textarea type="text" placeholder="Ваш вопрос"></textarea>
+            <button onClick={handleCloseDialog}>Отправить</button>
+          </form>
+        </div>
+      </div>
     </section>
   );
 }
