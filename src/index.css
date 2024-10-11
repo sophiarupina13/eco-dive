@@ -137,6 +137,7 @@ header.transparent {
   top: 0;
   left: 0;
   display: none;
+  z-index: 2000;
 }
 
 .form-bg.visible, .form-bg-faq.visible {
@@ -146,7 +147,6 @@ header.transparent {
 .form-buy {
   background-image: url("/public/src/form-bg.png");
   border-radius: 3vw;
-  z-index: 1001;
   border: 2px solid #1F5371;
   position: fixed;
   top: 50%;
@@ -154,6 +154,7 @@ header.transparent {
   transform:translate(-50%, -50%);
   padding: 4vw 4.5vw;
   color: #1F5371;
+  z-index: 2001;
 }
 
 .form-question {
@@ -378,12 +379,35 @@ header.transparent {
   background-position-x: center;
   height: 40vw;
   color: #fff;
-  padding: 13vw 8vw 0 8vw;
+  padding: 5vw 8vw 0 8vw;
+}
+
+.about-text {
+  padding: 0 10vw;
 }
 
 .about-description {
-  margin-top: 3vw;
-  width: 50vw;
+  margin-top: -2vw;
+  text-align: center;
+  font-size: larger;
+}
+
+.about-gallery ul {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  justify-content: center;
+  margin-bottom: 7vw;
+}
+
+.about-gallery ul li {
+  border-radius: 2vw;
+}
+
+.about-gallery ul li img {
+  width: 20vw;
+  height: 25vw;
+  border-radius: 2vw;
 }
 
 .section-faq {
@@ -421,7 +445,7 @@ header.transparent {
 }
 
 .section-drone {
-  padding: 3vw 8vw 35vw 8vw;
+  padding: 3vw 8vw 3vw 8vw;
 }
 
 .section-drone p, .section-drone h2, .section-drone h3 {
@@ -472,6 +496,9 @@ header.transparent {
 
 footer {
   position: relative;
+  background: #0d285e;
+  background: linear-gradient(0deg, rgba(12, 36, 83, 0.81) 52%, rgba(16,42,93,0.38) 77%, rgba(0,212,255,0) 100%);
+  min-height: 17vw;
 }
 
 .footer-text {
@@ -491,14 +518,6 @@ footer {
   text-align: end;
 }
 
-.bottom {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  z-index: 1;
-  pointer-events: none
-}
-
 .navigation {
   position: fixed;
   right: 2%;
@@ -515,7 +534,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #174D9C;
+  background-color: #1F5371;
   color: white;
   border-radius: 100vw;
 }

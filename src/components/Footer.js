@@ -17,7 +17,6 @@ export default function Footer() {
           Часы работы с 9:00 до 20:00 МСК, Пн. – Пт.
         </p>
       </div>
-      <img className="bottom" alt="bottom" src="../src/bottom.svg"></img>
     </footer>
   );
 }
