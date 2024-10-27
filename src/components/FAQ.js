@@ -112,7 +112,7 @@ export default function FAQ() {
           </p>
         </li>
       </ul>
-      <div className={`form-bg-faq ${isFormVisible ? "visible" : ""}`}>
+      <div className={`form-bg-faq ${isFormVisible ? "visible" : ""}`} onClick={handleCloseDialog}>
         <div className="form-question">
           <h2>Задайте свой вопрос</h2>
           <form onSubmit={handleSubmit}>

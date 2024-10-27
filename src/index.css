@@ -63,7 +63,7 @@ a:visited {
 }
 
 .logo {
-  scale: 1;
+  width: 7.5vw;
 }
 
 button, .logo {
@@ -255,6 +255,7 @@ header.transparent {
   right: -20vw; 
   opacity: 0;
   animation: slideIn 2s ease forwards;
+  width: 36vw;
 }
 
 @keyframes slideIn {
@@ -263,7 +264,7 @@ header.transparent {
     opacity: 0;
   }
   100% {
-    right: 10vw;
+    right: 8vw;
     opacity: 1;
   }
 }
@@ -392,6 +393,31 @@ header.transparent {
   font-size: larger;
 }
 
+.about-gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.slider-button {
+  background-color: #ffffff00;
+  padding: 0;
+  border-radius: 100vw;
+  width: 2.5vw;
+  height: 2.5vw;
+  margin-bottom: 5vw;
+}
+
+.slider {
+  width: 2.7vw;
+}
+
+.slider-right {
+  rotate: 180deg;
+}
+
 .about-gallery ul {
   display: flex;
   flex-direction: row;
@@ -488,6 +514,7 @@ header.transparent {
   margin-left: -18vw;
   margin-top: 7vw;
   scale: 0.9;
+  width: 40vw;
 }
 
 .drone-container2 {

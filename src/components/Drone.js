@@ -91,7 +91,7 @@ export default function Drone() {
           </ul>
         </div>
       </div>
-      <div className={`form-bg ${isFormVisible ? "visible" : ""}`}>
+      <div className={`form-bg ${isFormVisible ? "visible" : ""}`} onClick={handleCloseDialog}>
         <div className="form-buy">
           <h2>Оставьте заявку на покупку</h2>
           <form onSubmit={handleSubmit}>

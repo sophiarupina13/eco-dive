@@ -81,7 +81,7 @@ export default function Header() {
       <button className="button-buy" onClick={handleOpenDialog}>
         Купить
       </button>
-      <div className={`form-bg ${isFormVisible ? "visible" : ""}`}>
+      <div className={`form-bg ${isFormVisible ? "visible" : ""}`} onClick={handleCloseDialog}>
         <div className="form-buy">
           <h2>Оставьте заявку на покупку</h2>
           <form onSubmit={handleSubmit}>
